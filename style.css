@@ -222,7 +222,7 @@ button:hover {
   font-size: 88px;
   font-style: normal;
   font-weight: 700;
-  line-height: 88px; /* 100% */
+  line-height: 88px;
   letter-spacing: -2.5px;
 }
 
@@ -359,32 +359,40 @@ footer {
 }
 
 #infoContact h1 {
-  color: var(--white, #fff);
-  font-feature-settings: "clig" off, "liga" off;
-
-  /* Heading (XL) */
-  font-family: Space Grotesk;
+  color: var(--white);
+  font-family: "Space Grotesk", sans-serif;
   font-size: 5.5rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 5.5rem; /* 100% */
+  line-height: 5.5rem;
   letter-spacing: -0.15625rem;
 }
 
 #infoContact p {
   color: var(--grey, #d9d9d9);
-  font-feature-settings: "clig" off, "liga" off;
-
-  /* Body */
-  font-family: Space Grotesk;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.75rem; /* 155.556% */
+  line-height: 1.75rem;
 }
 
 #form {
   width: 27.8125rem;
   height: 20.4375rem;
   flex-shrink: 0;
+}
+
+#navFooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: -0.02775rem;
 }
