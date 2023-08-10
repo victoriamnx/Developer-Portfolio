@@ -32,14 +32,17 @@
 body {
   display: flex;
   flex-direction: column;
+  width: 100%;
   background-color: var(--background-color);
   background: url(components/images/pattern-circle.svg),
     url(components/images/image-profile-desktop.webp),
+    url(components/images/pattern-rings.svg),
     url(components/images/pattern-rings.svg) #151515;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 8.0625rem 8.0625rem, 27.8125rem 45rem, 33.125rem 8.0625rem;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 8.0625rem 8.0625rem, 27.8125rem 45rem, 33.125rem 8.0625rem,
+    33.125rem 8.0625rem;
   background-position: top 32.56rem right 34.06rem, top right 10.31rem,
-    top 8.31rem left -7.1875rem;
+    top 8.31rem left -7.1875rem, top 67.31rem right -7.1875rem;
 }
 
 header {
@@ -84,7 +87,7 @@ header h1 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 69.375rem;
+  width: 86.375rem;
   height: 33.63rem;
   /* flex-shrink: 0; */
   gap: 2.69rem;
@@ -122,7 +125,7 @@ button {
   justify-content: center;
   align-items: flex-start;
   cursor: pointer;
-  width: 7.5rem;
+  width: 9rem;
   height: 2.375rem;
   gap: 0.625rem;
   color: var(--white);
@@ -151,7 +154,7 @@ button:hover {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  gap: 1.87rem;
+  gap: 1.88rem;
   margin-top: 4.5rem;
   margin-bottom: 8.75rem;
 }
@@ -181,13 +184,18 @@ button:hover {
 .lang4,
 .lang5,
 .lang6 {
-  color: var(--white);
-  /* Heading (L) */
+  display: flex;
+  width: 21.5625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.875rem;
+  color: var(--white, #fff);
   font-family: "Space Grotesk", sans-serif;
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 3.5rem; /* 116.667% */
+  line-height: 3.5rem;
   letter-spacing: -0.09375rem;
 }
 
@@ -337,14 +345,23 @@ footer {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 33.125rem 8.0625rem;
   background-position: top 20.310000000000002rem left -7.1875rem;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 #contact {
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 69.375rem;
+  height: 20.4375rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  margin-top: 5.25rem;
 }
 
 #infoContact {
@@ -384,10 +401,11 @@ footer {
 }
 
 #navFooter {
-  width: 100%;
+  width: 69.4rem;
   display: flex;
+  height: 9rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   color: var(--white);
   font-family: "Space Grotesk", sans-serif;
   font-size: 1rem;
@@ -395,4 +413,34 @@ footer {
   font-weight: 700;
   line-height: 2rem;
   letter-spacing: -0.02775rem;
+  gap: 10px;
+  border-top: 1px solid white;
+  margin-top: 5.25rem;
+}
+
+form {
+  display: flex;
+  width: 27.8125rem;
+  height: 0.0625rem;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+input, textarea{
+  background: transparent;
+  border: none;
+  padding-bottom: 1rem;
+}
+
+::placeholder {
+  color: var(--white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.625rem; /* 162.5% */
+  letter-spacing: -0.01388rem;
 }
